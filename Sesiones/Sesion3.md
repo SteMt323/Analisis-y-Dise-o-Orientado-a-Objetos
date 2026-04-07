@@ -77,6 +77,67 @@ VehiculoAereo(superVehiculo, altitudMaxima, numeroMotores)
 | **VehiculoTerrestre** | `Automovil`, `Motocicleta`, `Camion` | `numeroPuertas`, `cilindrada`, `capacidadCarga` |
 | **VehiculoAereo** | `AvionComercial`, `Helicoptero` | `capacidadPasajeros`, `numeroRotores` |
 
+```mermaid
+classDiagram
+    class Vehiculo {
+        * marca
+        * modelo
+        * año
+    }
+
+    class VehiculoTerrestre {
+        * Vehiculo
+        * numeroRuedas
+        * tipoCombustible
+    }
+
+    class VehiculoAereo {
+        * Vehiculo
+        * altitudMaxima
+        * numeroMotores
+    }
+
+    class Automovil {
+        * VehiculoTerretre
+        * tipoCombustible
+        * numeroRuedas
+    }
+
+    class Motocicleta {
+        * VehiculoTerretre
+        * tipoCombustible
+        * numeroRuedas
+    }
+
+    class Camion {
+        * VehiculoTerretre
+        * tipoCombustible
+        * numeroRuedas
+    }
+
+    class AvionComercial {
+        * VehiculoAereo
+        * altitudMaxima
+        * numeroMotore
+    }
+
+    class Helicoptero {
+        * VehiculoAereo
+        * altitudMaxima
+        * numeroMotore
+    }
+
+    Vehiculo "" -- "" VehiculoTerrestre
+    Vehiculo "" -- "" VehiculoAereo 
+
+    VehiculoTerrestre "" -- "" Camion
+    VehiculoTerrestre "" -- "" Automovil 
+    VehiculoTerrestre "" -- "" Motocicleta
+
+    VehiculoAereo "" -- "" AvionComercial  
+    VehiculoAereo "" -- "" Helicoptero   
+```
+
 ---
 
 ## Identifique relaciones de composición en un sistema de pedidos en línea.
