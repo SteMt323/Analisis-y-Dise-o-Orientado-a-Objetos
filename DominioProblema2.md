@@ -151,7 +151,9 @@ Consiste en una explicación clara del contexto, redactada en **lenguaje natural
 
 ### 6.2 Identificación de actores
 
-Los **actores** son los participantes externos o roles que intervienen en el contexto del sistema.
+Los **actores** son los participantes externos o roles que intervienen en el contexto del sistema.  
+
+> Casos de usos
 
 #### Ejemplos
 - **Cliente** → realiza compras  
@@ -161,7 +163,7 @@ Los **actores** son los participantes externos o roles que intervienen en el con
 Cada actor debe tener:
 
 - nombre claro,
-- breve descripción,
+- breve descripción (casos de uso),
 - papel dentro del dominio.
 
 ---
@@ -201,6 +203,8 @@ Estos conceptos ayudan a construir posteriormente el **modelo de clases**, ya qu
 ### 6.5 Reglas del negocio
 
 Las reglas del negocio son condiciones que el sistema debe respetar porque forman parte del funcionamiento real del dominio.
+
+> Constrains
 
 #### Ejemplos
 - El stock de un producto nunca puede estar debajo del mínimo.
